@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REST-api", "REST-api\REST-api.csproj", "{AA54AD3E-D760-4378-BE19-25A6F4F9DBC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsForms", "WindowsForms\WindowsForms.csproj", "{609D259B-8AEE-4180-95B1-04C5ACC1CB5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppTest", "ConsoleAppTest\ConsoleAppTest.csproj", "{6D2F89D1-C7DA-4A11-BDB3-2B5F36E5896A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA54AD3E-D760-4378-BE19-25A6F4F9DBC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA54AD3E-D760-4378-BE19-25A6F4F9DBC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA54AD3E-D760-4378-BE19-25A6F4F9DBC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA54AD3E-D760-4378-BE19-25A6F4F9DBC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{609D259B-8AEE-4180-95B1-04C5ACC1CB5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{609D259B-8AEE-4180-95B1-04C5ACC1CB5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{609D259B-8AEE-4180-95B1-04C5ACC1CB5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{609D259B-8AEE-4180-95B1-04C5ACC1CB5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D2F89D1-C7DA-4A11-BDB3-2B5F36E5896A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D2F89D1-C7DA-4A11-BDB3-2B5F36E5896A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D2F89D1-C7DA-4A11-BDB3-2B5F36E5896A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D2F89D1-C7DA-4A11-BDB3-2B5F36E5896A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
