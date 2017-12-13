@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\REST-api\bin\Debug\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="REST-api">
       <HintPath>..\REST-api\bin\Debug\REST-api.dll</HintPath>
     </Reference>
