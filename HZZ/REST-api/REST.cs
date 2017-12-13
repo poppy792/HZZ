@@ -26,31 +26,28 @@ namespace REST_api
             webresponse.Close();
             return result;
         }
-        public List<Category>GetWorkCategories()
+        public List<Category> GetWorkCategories()
         {
             List<Category> lRESTCategory = new List<Category>();
             //string sUrl = System.Configuration.ConfigurationManager.AppSettings["RestApiUrl"];
             string url = "https://data.gov.hr/api/2/rest/package/slobodna-radna-mjesta-po-zanimanju";
             string sJson = CallRestMethod(url);
-            JArray oJson = JArray.Parse(sJson);
-            foreach(JObject item in oJson)
+            JObject oJson = JObject.Parse(sJson);
+            var oCategories = oJson["resources"].ToList();
+            List<Category> lCategories = new List<Category>();
+            for (int i = 0; i < oCategories.Count; i++)
             {
-                int Position = (int)item.GetValue("position");
-                string ID = (string)item.GetValue("id");
-                string Description = (string)item.GetValue("description");
-                string Created = (string)item.GetValue("created");
-                string Url = (string)item.GetValue("url");
-                lRESTCategory.Add(new Category
+                lCategories.Add(new Category
                 {
-                    nID = ID,
-                    sDescription = Description,
-                    sCreated = Created,
-                    sUrl = Url,
-                    nPosition = Position
-
-                });
+                    nID = (string)oCategories[i]["id"],
+                    sDescription = (string)oCategories[i]["description"],
+                    sCreated = (string)oCategories[i]["created"],
+                    sUrl = (string)oCategories[i]["url"],
+                    nPosition = (int)oCategories[i]["position"]
+                });          
             }
-            return lRESTCategory;
+            return lCategories;
         }
     }
 }
+    
