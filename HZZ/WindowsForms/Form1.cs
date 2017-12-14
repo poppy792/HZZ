@@ -20,11 +20,13 @@ namespace WindowsForms
             InitializeComponent();
 
 
-            List<Button> button = new List<Button>();
-            for (int i = 0; i<10; i++)
+            REST Kategorija = new REST();
+            List<Category> kategorije = Kategorija.GetWorkCategories();
+            for(int i=0;i<kategorije.Count();i++)
             {
                 Button newButton = new Button();
-                button.Add(newButton);
+                newButton.Location = new Point(newButton.Width * i + 4, 0);
+                newButton.Text = "neki text";
                 this.Controls.Add(newButton);
             }
 
