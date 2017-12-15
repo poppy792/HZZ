@@ -26,7 +26,7 @@ namespace WindowsForms
             {
                 Button newButton = new Button();
                 newButton.Location = new Point(newButton.Width * i + 4, 0);
-                newButton.Text = "neki text";
+                newButton.Text = kategorije[i].sDescription;
                 this.Controls.Add(newButton);
             }
 
