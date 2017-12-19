@@ -19,13 +19,18 @@ namespace WindowsForms
         {
             InitializeComponent();
 
-
+            int width, height;
+            width = 120;
+            height = 75;
             REST Kategorija = new REST();
             List<Category> kategorije = Kategorija.GetWorkCategories();
             for(int i=0;i<kategorije.Count();i++)
             {
+               
                 Button newButton = new Button();
-                newButton.Location = new Point(newButton.Width * i + 4, 0);
+                newButton.Location = new Point(newButton.Width*2*i + 4, 25);
+                newButton.Size = new Size(width, height);
+                newButton.Location = new Point();
                 newButton.Text = kategorije[i].sDescription;
                 this.Controls.Add(newButton);
             }
