@@ -27,9 +27,8 @@ namespace WindowsForms
             for(int i=0;i<kategorije.Count();i++)
             {
                
-                Button newButton = new Button();
-                newButton.Location = new Point(newButton.Width*i*2 + 4, 35);
-              
+                Button newButton = new Button(); // pitati kako postaviti u vise redova gumbice
+                newButton.Location = new Point(newButton.Width*i*2 + 4, 35);             
                 newButton.Size = new Size(width, height);
                 newButton.Left -= 300;
               //  newButton.Click += new EventHandler();
