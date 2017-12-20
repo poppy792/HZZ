@@ -11,7 +11,7 @@ using REST_api;
 
 namespace WindowsForms
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form2
     {
         public List<Button> button = new List<Button>();
         public List<Category> lCategories = new List<Category>();
@@ -28,9 +28,11 @@ namespace WindowsForms
             {
                
                 Button newButton = new Button();
-                newButton.Location = new Point(newButton.Width*2*i + 4, 25);
+                newButton.Location = new Point(newButton.Width*i*2 + 4, 35);
+              
                 newButton.Size = new Size(width, height);
-                newButton.Location = new Point();
+                newButton.Left -= 300;
+              //  newButton.Click += new EventHandler();
                 newButton.Text = kategorije[i].sDescription;
                 this.Controls.Add(newButton);
             }
