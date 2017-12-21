@@ -26,16 +26,28 @@ namespace WindowsForms
             List<Category> kategorije = Kategorija.GetWorkCategories();
             for(int i=0;i<kategorije.Count();i++)
             {
-               
-                Button newButton = new Button(); // pitati kako postaviti u vise redova gumbice
-                newButton.Location = new Point(newButton.Width*i*2 + 4, 35);             
-                newButton.Size = new Size(width, height);
-                newButton.Left -= 300;
-              //  newButton.Click += new EventHandler();
-                newButton.Text = kategorije[i].sDescription;
-                this.Controls.Add(newButton);
-            }
+                Button newButton = new Button();
 
+                if (kategorije[i].nPosition <= 9)
+                {
+                    newButton.Location = new Point(newButton.Width * i * 2 + 2, 35);
+                    newButton.Size = new Size(width, height);
+                    newButton.Left -= 300;
+                    newButton.Text = kategorije[i].sDescription;
+                    //newButton.Click+= new EventHandler();
+                    this.Controls.Add(newButton);
+                }
+                else if (kategorije[i].nPosition <= 18)
+                {
+                    newButton.Location = new Point(newButton.Width * i * 2 + 2, 150);
+                    newButton.Size = new Size(width, height);
+                    newButton.Left -= 1500;
+                    newButton.Text = kategorije[i].sDescription;
+                    //newButton.Click+= new EventHandler();
+                    this.Controls.Add(newButton);
+                }
+            }
         }
     }
 }
+// Pozvati XML, doci do response, spremiti ga u datoteku(.xml), ucitati ga u c# i prikazati rezultate
