@@ -51,5 +51,6 @@ namespace WindowsForms
     }
 }
 // Pozvati XML, doci do response, spremiti ga u datoteku(.xml), ucitati ga u c# i prikazati rezultate
-/*https://developer.yahoo.com/dotnet/howto-xml_cs.html */
+/* https://developer.yahoo.com/dotnet/howto-xml_cs.html */
 /*return Request.CreateResponse(HttpStatusCode.OK, terms);*//*--> Jel se mora praviti posebna klasa ponovno kao category ?*/
+/* https://codehandbook.org/c-object-xml/ */
