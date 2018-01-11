@@ -77,7 +77,8 @@ namespace WindowsForms
         }
         protected void b_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hello"); //otvoriti formu i ispisati url
+            Form2 Form2=new Form2();
+            Form2.Show();
         }
     }
 }
