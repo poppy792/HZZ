@@ -28,7 +28,6 @@ namespace REST_api
         }
         public List<Category> GetWorkCategories()
         {
-           // List<Category> lRESTCategory = new List<Category>();
             //string sUrl = System.Configuration.ConfigurationManager.AppSettings["RestApiUrl"];
             string url = "https://data.gov.hr/api/2/rest/package/slobodna-radna-mjesta-po-zanimanju";
             string sJson = CallRestMethod(url);

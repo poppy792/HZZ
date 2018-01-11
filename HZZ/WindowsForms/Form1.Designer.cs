@@ -33,6 +33,7 @@
             this.pomoćToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oProgramuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izlazToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,7 +43,7 @@
             this.iZBORNIKToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1151, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1502, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -75,14 +76,25 @@
             this.izlazToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.izlazToolStripMenuItem.Text = "Izlaz";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(69, 127);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(926, 300);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1151, 546);
+            this.ClientSize = new System.Drawing.Size(1502, 689);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HZZ";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -98,6 +110,7 @@
         private System.Windows.Forms.ToolStripMenuItem pomoćToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem oProgramuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem izlazToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 

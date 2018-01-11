@@ -15,8 +15,16 @@ namespace ConsoleAppTest
             List<Category> kategorije = Kategorija.GetWorkCategories();
             for (int i = 0; i < kategorije.Count; i++)
             {
-                Console.WriteLine(kategorije[i].sDescription + "/n " + kategorije[i].nID);
-                Console.WriteLine("-----------------------------------");
+                if (kategorije[i].nPosition < 4)
+                {
+                    Console.WriteLine(kategorije[i].sDescription + "/n " + kategorije[i].nID);
+                    Console.WriteLine("-----------------------------------");
+                }
+                 if (kategorije[i].nPosition < 8)
+                {
+                    Console.WriteLine(kategorije[i].sDescription + "/n " + kategorije[i].nID);
+                    Console.WriteLine("-----------------------------------");
+                }
             }
             Console.ReadLine();
         }
