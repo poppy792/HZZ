@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Configuration;
+using System.Xml;
+using REST_api;
 
 namespace REST_api
 {
@@ -46,6 +48,32 @@ namespace REST_api
                 });          
             }
             return lCategories;
+        }
+        public List<Job> GetJobs()
+        {
+            string sUrl = " ";
+            string sXmlString;
+            using (var oWebClient = new WebClient())
+            {
+                sXmlString = oWebClient.DownloadString(sUrl);
+                
+            }
+            XmlDocument oXmlDocument = new XmlDocument();
+            oXmlDocument.LoadXml(sXmlString);
+
+            XmlNodeList oJobs = oXmlDocument.DocumentElement.SelectNodes("channel/item");
+            List<Job> lJobs = new List<Job>();
+            foreach (XmlNode oJob in oJobs)
+            {
+                lJobs.Add(new Job
+                {
+                    sTitle = (oJob.SelectSingleNode("title").InnerText),
+                    sSubject = (oJob.SelectSingleNode("subject").InnerText),
+                    sPubDate = (oJob.SelectSingleNode("pubDate").InnerText),
+                    sDescription = (oJob.SelectSingleNode("description").InnerText)
+                });            
+            }
+            return lJobs;
         }
     }
 }

@@ -18,16 +18,19 @@ namespace WindowsForms
         {
             InitializeComponent();
 
-            REST Kategorija = new REST();
-            List<Category> kategorije = Kategorija.GetWorkCategories();
-            dataGridView1.DataSource = lCategories;
+         
+
+            REST Poslovi = new REST();
+            List<Job> lJobs = Poslovi.GetJobs();
+            dataGridView1.DataSource = lJobs;
+
 
 
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+       
         }
     }
 }

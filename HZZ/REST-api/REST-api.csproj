@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Category.cs" />
+    <Compile Include="Job.cs" />
     <Compile Include="REST.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

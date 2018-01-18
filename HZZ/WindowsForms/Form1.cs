@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using REST_api;
+using System.Diagnostics;
 
 namespace WindowsForms
 {
@@ -31,52 +32,57 @@ namespace WindowsForms
                 newButton.Size = new Size(width, height);
                 newButton.Left -= 300;
                 newButton.Text = kategorije[i].sDescription;
-                newButton.Click += new EventHandler(b_Click);
+                string sUrl = kategorije[i].sUrl;
+                newButton.Click += (sender, e) => b_Click(sender, e, sUrl);
                 this.groupBox1.Controls.Add(newButton);
 
-             /*   if (kategorije[i].nPosition <4)
-                {
-                    newButton.Location = new Point(newButton.Width * i * 2 + 2, 35);
-                    newButton.Size = new Size(width, height);
-                    newButton.Left -= 300;
-                    newButton.Text = kategorije[i].sDescription;
-                    newButton.Click += new EventHandler(b_Click);
-                    this.groupBox1.Controls.Add(newButton);
+                
+               
 
-
-                }
-                 else if (kategorije[i].nPosition <= 13)
-                {
-                    newButton.Location = new Point(newButton.Width * i * 2 + 2, 150);
-                    newButton.Size = new Size(width, height);
-                    newButton.Left -= 1500;
-                    newButton.Text = kategorije[i].sDescription;
-                    newButton.Click += new EventHandler(b_Click);
-                    this.Controls.Add(newButton);
-                }
-                   else if (kategorije[i].nPosition < 18)
+                /*   if (kategorije[i].nPosition <4)
                    {
-                       newButton.Location = new Point(newButton.Width * i * 2 + 2, 265);
+                       newButton.Location = new Point(newButton.Width * i * 2 + 2, 35);
                        newButton.Size = new Size(width, height);
-                       newButton.Left -= 2100;
+                       newButton.Left -= 300;
                        newButton.Text = kategorije[i].sDescription;
-                       newButton.Click+= new EventHandler(b_Click);
-                       this.Controls.Add(newButton);
+                       newButton.Click += new EventHandler(b_Click);
+                       this.groupBox1.Controls.Add(newButton);
+
+
                    }
-                 /*  else if (kategorije[i].nPosition < 30)
+                    else if (kategorije[i].nPosition <= 13)
                    {
-                       newButton.Location = new Point(newButton.Width * i * 2 + 2, 450);
+                       newButton.Location = new Point(newButton.Width * i * 2 + 2, 150);
                        newButton.Size = new Size(width, height);
-                       newButton.Left -= 4100;
+                       newButton.Left -= 1500;
                        newButton.Text = kategorije[i].sDescription;
                        newButton.Click += new EventHandler(b_Click);
                        this.Controls.Add(newButton);
                    }
-               }*/
+                      else if (kategorije[i].nPosition < 18)
+                      {
+                          newButton.Location = new Point(newButton.Width * i * 2 + 2, 265);
+                          newButton.Size = new Size(width, height);
+                          newButton.Left -= 2100;
+                          newButton.Text = kategorije[i].sDescription;
+                          newButton.Click+= new EventHandler(b_Click);
+                          this.Controls.Add(newButton);
+                      }
+                    /*  else if (kategorije[i].nPosition < 30)
+                      {
+                          newButton.Location = new Point(newButton.Width * i * 2 + 2, 450);
+                          newButton.Size = new Size(width, height);
+                          newButton.Left -= 4100;
+                          newButton.Text = kategorije[i].sDescription;
+                          newButton.Click += new EventHandler(b_Click);
+                          this.Controls.Add(newButton);
+                      }
+                  }*/
             }
         }
-        protected void b_Click(object sender, EventArgs e)
+        protected void b_Click(object sender, EventArgs e, string sUrl)
         {
+            Debug.WriteLine(sUrl);
             Form2 Form2=new Form2();
             Form2.Show();
         }
