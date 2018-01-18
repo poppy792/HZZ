@@ -49,9 +49,10 @@ namespace REST_api
             }
             return lCategories;
         }
-        public List<Job> GetJobs()
+        public List<Job> GetJobs(//probaj tu prebacivati parametar url koji koristiš dole)
         {
-            string sUrl = " ";
+            string sUrl = " ";//ovako baš i ne znam jel ti ima smisla jer ti je to funkcija
+            //jedino ako slažeš string od više dijelova
             string sXmlString;
             using (var oWebClient = new WebClient())
             {
